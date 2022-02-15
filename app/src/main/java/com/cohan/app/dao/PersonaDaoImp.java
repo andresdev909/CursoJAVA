@@ -18,10 +18,10 @@ public class PersonaDaoImp implements PersonaDao{
     @Override
     public List<Persona> getPersona()
     {
-        String query = "FROM Persona per, Direccion dir WHERE per.id = dir.id";
+        String query = "* FROM Persona";
         return entityManager.createQuery(query).getResultList();
     }
-
+/*
     @Override
     public void Eliminar(Long id) {
         Persona persona = entityManager.find(Persona.class, id);
@@ -31,5 +31,5 @@ public class PersonaDaoImp implements PersonaDao{
     @Override
     public void registrar(Persona persona) {
         entityManager.merge(persona);
-    }
+    }*/
 }

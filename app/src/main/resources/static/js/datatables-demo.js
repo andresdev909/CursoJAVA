@@ -15,7 +15,7 @@ async function cargarPersonas()
   });
   const content = await request.json();
   console.log(content);
-
+    /*
   let tablas
   for(let elem of content)
   {
@@ -25,9 +25,9 @@ async function cargarPersonas()
   }
 
   document.querySelector('#dTPersonas tBody').outerHTML = tablas
-
+*/
 }
-
+/*
 async function eliminarPersona(id)
 {
     let result = confirm("Desea eliminar a esta persona?")
@@ -43,4 +43,4 @@ async function eliminarPersona(id)
         location.reload()
     }else
     {}
-}
+}*/

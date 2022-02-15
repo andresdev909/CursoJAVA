@@ -7,8 +7,8 @@ import java.util.List;
 public interface PersonaDao {
 
     public List<Persona> getPersona();
-
+/*
     public void Eliminar(Long id);
 
-    void registrar(Persona persona);
+    void registrar(Persona persona);*/
 }

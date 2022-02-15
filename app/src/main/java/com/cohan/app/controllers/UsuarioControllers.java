@@ -20,8 +20,8 @@ public class UsuarioControllers {
     {
         return personaDao.getPersona();
     }
-
-    @RequestMapping(value = "persona", method = RequestMethod.POST)
+/*
+    @RequestMapping(value = "registroPersona", method = RequestMethod.POST)
     public void registrarPersona(@RequestBody Persona persona)
     {
         personaDao.registrar(persona);
@@ -31,5 +31,5 @@ public class UsuarioControllers {
     public void eliminar(@PathVariable Long id)
     {
         personaDao.Eliminar(id);
-    }
+    }*/
 }

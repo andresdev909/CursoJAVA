@@ -2,36 +2,16 @@
 async function registrarPersona()
 {
   let datosPer = {}
-  datosPer.nombre = document.querySelector('#perNombre').value
-  datosPer.email = document.querySelector('#perEmail').value
-  datosPer.telefono = document.querySelector('#perTelefono').value
+  datosPer.nombre = document.getElementById('perNombre').value
+  datosPer.email = document.getElementById('perEmail').value
+  datosPer.telefono = document.getElementById('perTelefono').value
+  datosPer.direccion = document.getElementById('PerDir').value
+  datosPer.ciudad = document.getElementById('perCiudad').value
+  datosPer.depar = document.getElementById('perDep').value
+  datosPer.codigo = document.getElementById('perCodigo').value
+  datosPer.pais = document.getElementById('perPais').value
 
-  let datosDir = {}
-  datosDir.direccion = document.querySelector('#PerDir').value
-  datosDir.ciudad = document.querySelector('#perCiudad').value
-  datosDir.depar = document.querySelector('#perDep').value
-  datosDir.codigo = document.querySelector('#perCodigo').value
-  datosDir.pais = document.querySelector('#perPais').value
-
-  const request1 = await fetch('address', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(datosDir)
-    });
-
-  const request2 = await fetch('persona', {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    });
-    const content = await request2.json();
-
-    datosPer.idDir = content.id
+  /*Funcion que hcar el inset a la base de datos de direccion*/
 
   const request3 = await fetch('persona', {
     method: 'POST',
@@ -39,7 +19,7 @@ async function registrarPersona()
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify()
+    body: JSON.stringify(datosPer)
   });
 
   }
